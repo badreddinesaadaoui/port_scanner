@@ -2,7 +2,7 @@ Description :
 
 This script allows you to perform a port scan using the nmap library. You can specify the IP address, scan type, verbosity level, scan time, and ports to scan. The output of the scan will be saved to a file in the your_scans folder.
 
-Requirements:
+Requirements :
 
     - Python 3
     - nmap library
