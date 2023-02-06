@@ -8,7 +8,7 @@ ip_address = input("Enter IP address: ")
 scan_type = input("Enter scan type (S, U, T, A, W, M, N): ")
 
 # Ask for user input for verbosity
-verbosity = input("Enter verbosity level (v, vv): ")
+verbosity = input("Enter verbosity level (v, vv, vvv): ")
 
 # Ask for user input for scan time
 scan_time = input("Enter scan time (1-5): ")
@@ -20,7 +20,7 @@ ports = input("Enter ports to scan (e.g. 1-21,22,80,443): ")
 nm = nmap.PortScanner()
 
 # Run the scan
-nm.scan(ip_address, arguments=f"-s{scan_type} -v{verbosity} -p{ports} -T{scan_time}")
+nm.scan(ip_address, arguments=f"-s{scan_type} -{verbosity} -p{ports} -T{scan_time}")
 
 # Create a folder named "your_scans" if it doesn't exist
 if not os.path.exists("your_scans"):
